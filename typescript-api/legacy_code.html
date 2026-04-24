@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Parcelles</title>
+</head>
+<body>
+    <select id="parcel-select" onchange="getParcelInfo(this.value)">
+        <option value="">Sélectionner une parcelle</option>
+        <option value="PARC-2024-001">Parcelle Nord</option>
+        <option value="PARC-2024-002">Parcelle Sud</option>
+    </select>
+
+    <div id="parcel-info">
+        <h2 id="parcel-name"></h2>
+        <p id="area"></p>
+        <p id="crop"></p>
+    </div>
+
+    <script src="legacy_code.ts"></script>
+</body>
+</html>

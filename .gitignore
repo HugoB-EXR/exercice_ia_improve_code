@@ -1,0 +1,15 @@
+# C++
+*.o
+*.exe
+*.out
+build/
+cmake-build-*/
+.vscode/
+.idea/
+
+# TypeScript/Node
+node_modules/
+dist/
+*.log
+.env
+.DS_Store

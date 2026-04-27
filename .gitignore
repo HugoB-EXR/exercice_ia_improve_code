@@ -13,3 +13,12 @@ dist/
 *.log
 .env
 .DS_Store
+
+# Analyses et prompts personnels
+analyse_cpp_sensor.md
+analyse_typescript_api.md
+prompt_cpp_sensor.md
+prompt_typescript_api.md
+best_practices_typescript.md
+typescript-api/dashboard.html
+typescript-api/parcelDashboard.ts

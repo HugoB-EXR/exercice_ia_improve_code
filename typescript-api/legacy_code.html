@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Parcelles</title>
+    <script src="legacy_code.ts" defer></script>
 </head>
 <body>
-    <select id="parcel-select" onchange="getParcelInfo(this.value)">
-        <option value="">Sélectionner une parcelle</option>
-        <option value="PARC-2024-001">Parcelle Nord</option>
-        <option value="PARC-2024-002">Parcelle Sud</option>
-    </select>
+    <main>
+        <section aria-label="Sélection de parcelle">
+            <select id="parcel-select" onchange="getParcelInfo(this.value)">
+                <option value="" disabled selected>Sélectionner une parcelle</option>
+                <option value="PARC-2024-001">Parcelle Nord – Blé tendre</option>
+                <option value="PARC-2024-002">Parcelle Sud – Colza</option>
+            </select>
+        </section>
 
-    <div id="parcel-info">
-        <h2 id="parcel-name"></h2>
-        <p id="area"></p>
-        <p id="crop"></p>
-    </div>
-
-    <script src="legacy_code.ts"></script>
+        <section id="parcel-info" aria-label="Détails de la parcelle">
+            <h2 id="parcel-info__name"></h2>
+            <p id="parcel-info__area"></p>
+            <p id="parcel-info__crop"></p>
+        </section>
+    </main>
 </body>
 </html>

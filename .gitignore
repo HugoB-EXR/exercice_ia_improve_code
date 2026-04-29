@@ -22,3 +22,6 @@ prompt_typescript_api.md
 best_practices_typescript.md
 typescript-api/dashboard.html
 typescript-api/parcelDashboard.ts
+cpp-sensor/parse_sensors.c
+typescript-api/index.html
+typescript-api/parcel-api.ts

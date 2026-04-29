@@ -18,9 +18,10 @@
 
 1. Clone ce repo
 2. Choisis ton exercice (C++ ou TypeScript)
-3. Identifie
+3. Identifie les problèmes
 4. Tu as le droit d'exécuter **un seul** prompt avec github copilot pour améliorer le code, sans code à la main
-5. Créé une branche sur la qule tu vas push le prompt exécuté ainsi que le code amélioré
+5. Créé une branche sur laquelle tu vas push le prompt exécuté ainsi que le code amélioré
+6. Ouvrir une PR avec vos changements
 
 ## Objectifs pédagogiques
 

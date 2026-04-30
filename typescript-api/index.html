@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Parcelles</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 640px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      color: #1a1a1a;
+    }
+
+    h1 { font-size: 1.4rem; margin-bottom: 1.25rem; }
+
+    select {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    select:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    #parcel-status {
+      min-height: 1.5rem;
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+    }
+
+    #parcel-status.loading { color: #555; }
+    #parcel-status.error   { color: #b00020; }
+
+    #parcel-info {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.5rem;
+      min-height: 7rem;
+      background: #fafafa;
+    }
+
+    .field-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #666;
+      margin: 0.75rem 0 0.1rem;
+    }
+
+    .field-label:first-child { margin-top: 0; }
+
+    .field-value {
+      font-size: 1rem;
+      margin: 0;
+      min-height: 1.4em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dashboard Parcelles</h1>
+
+  <select id="parcel-select" aria-label="Sélectionner une parcelle">
+    <option value="">Sélectionner une parcelle</option>
+    <option value="PARC-2024-001">Parcelle Nord</option>
+    <option value="PARC-2024-002">Parcelle Sud</option>
+  </select>
+
+  <div id="parcel-status" class="status" role="status" aria-live="polite"></div>
+
+  <div id="parcel-info" aria-label="Informations de la parcelle">
+    <p class="field-label">Nom</p>
+    <p class="field-value" id="parcel-name"></p>
+    <p class="field-label">Surface</p>
+    <p class="field-value" id="parcel-area"></p>
+    <p class="field-label">Culture</p>
+    <p class="field-value" id="parcel-crop"></p>
+  </div>
+
+  <script src="parcel-api.js"></script>
+</body>
+</html>
